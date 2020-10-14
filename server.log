@@ -4,3 +4,5 @@
 ::1 - - [14/Oct/2020:15:29:21 +0000] "POST /api/auth/register/ HTTP/1.1" 500 1590 "-" "PostmanRuntime/7.26.5"
 ::1 - - [14/Oct/2020:15:29:54 +0000] "POST /api/auth/register/ HTTP/1.1" 400 29 "-" "PostmanRuntime/7.26.5"
 ::1 - - [14/Oct/2020:15:30:40 +0000] "POST /api/auth/register/ HTTP/1.1" 200 81 "-" "PostmanRuntime/7.26.5"
+::1 - - [14/Oct/2020:16:08:38 +0000] "POST /api/auth/login/ HTTP/1.1" 500 704 "-" "PostmanRuntime/7.26.5"
+::1 - - [14/Oct/2020:16:09:33 +0000] "POST /api/auth/login/ HTTP/1.1" 200 260 "-" "PostmanRuntime/7.26.5"

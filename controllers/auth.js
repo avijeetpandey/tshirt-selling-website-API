@@ -36,6 +36,8 @@ exports.loginHandler = (req, res) => {
     });
   }
 
+  let {email,password} = req.body
+
   User.findOne({ email }, (err, user) => {
     if (err || !user) {
       return res.status(400).json({
@@ -72,6 +74,7 @@ exports.signout = (req, res) => {
 exports.isSignedIn = expressJwt({
   secret: process.env.SECRET,
   userProperty: "auth",
+  algorithms: ['HS256']
 });
 
 //custom middlewares

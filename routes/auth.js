@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { check } = require("express-validator");
 
-const { registerHandler  , loginHandler } = require("../controllers/auth");
+const { registerHandler, loginHandler } = require("../controllers/auth");
 
 // register route
 router.post(
@@ -19,11 +19,14 @@ router.post(
   registerHandler
 );
 
-
 // login route
-router.post("/login",[
+router.post(
+  "/login",
+  [
     check("email", "email is required").isEmail(),
-    check("password", "password field is required").isLength({ min: 8 })
-],loginHandler);
+    check("password", "password field is required").isLength({ min: 8 }),
+  ],
+  loginHandler
+);
 
 module.exports = router;
