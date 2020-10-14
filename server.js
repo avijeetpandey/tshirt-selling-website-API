@@ -1,6 +1,6 @@
 // importing libraries
-require('dotenv').config()
-require('./connection/database')
+require("dotenv").config();
+require("./connection/database");
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
@@ -10,7 +10,9 @@ const path = require("path");
 const fs = require("fs");
 
 const PORT = process.env.PORT || 5000;
-const app=express()
+const app = express();
+
+const authRoute = require("./routes/auth");
 
 //writting stream for logs
 const logStream = fs.createWriteStream(path.join(__dirname, "server.log"), {
@@ -22,6 +24,8 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(morgan("combined", { stream: logStream }));
+
+app.use("/api/auth", authRoute);
 
 app.listen(PORT, () => {
   console.log(`server is up and running on port ${PORT}`);

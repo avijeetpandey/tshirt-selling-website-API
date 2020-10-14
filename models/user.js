@@ -8,12 +8,7 @@ let userSchema = new mongoose.Schema(
       type: String,
       required: true,
       maxlength: 32,
-      trim: truq,
-    },
-    lastName: {
-      type: String,
       trim: true,
-      maxlength: 32,
     },
     email: {
       trim: true,
@@ -27,7 +22,7 @@ let userSchema = new mongoose.Schema(
     },
     salt: String,
     encrypted_pass: {
-      String,
+      type:String,
       required: true,
     },
     role: {
@@ -55,7 +50,7 @@ userSchema
     return this._password;
   });
 
-userSchema.method = {
+userSchema.methods = {
   authenticate: function (plainpassword) {
     return this.securePassword(plainpassword) === this.encrypted_pass;
   },
