@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
 
-let productScheme = new mongoose.Schema(
+let productSchema = new mongoose.Schema(
   {
     name: {
       type: Strinq,
@@ -43,4 +43,4 @@ let productScheme = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Product", productScheme);
+module.exports = mongoose.model("Product", productSchema);
