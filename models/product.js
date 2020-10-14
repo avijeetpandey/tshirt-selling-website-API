@@ -4,13 +4,13 @@ const { ObjectId } = mongoose.Schema;
 let productSchema = new mongoose.Schema(
   {
     name: {
-      type: Strinq,
+      type: String,
       required: true,
       trim: true,
       maxlength: 32,
     },
     description: {
-      type: Strinq,
+      type: String,
       required: true,
       trim: true,
       maxlength: 1000,
