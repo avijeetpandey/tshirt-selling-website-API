@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(morgan("combined", { stream: logStream }));
 
-app.use("/api/auth", authRoute);
+app.use("/api", authRoute);
 app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);

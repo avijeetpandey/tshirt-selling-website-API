@@ -7,7 +7,7 @@ const expressJwt = require("express-jwt");
 exports.registerHandler = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    return res.status(422).json({
+    return res.json({
       error: errors.array()[0].msg,
     });
   }
@@ -15,8 +15,8 @@ exports.registerHandler = (req, res) => {
   const user = new User(req.body);
   user.save((err, user) => {
     if (err) {
-      return res.status(400).json({
-        err: "Unable to save user",
+      return res.json({
+        error : "Unable to save user",
       });
     }
     res.json({
@@ -31,7 +31,7 @@ exports.registerHandler = (req, res) => {
 exports.loginHandler = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    return res.status(422).json({
+    return res.json({
       error: errors.array()[0].msg,
     });
   }
@@ -40,7 +40,7 @@ exports.loginHandler = (req, res) => {
 
   User.findOne({ email }, (err, user) => {
     if (err || !user) {
-      return res.status(400).json({
+      return res.json({
         error: "user doesnot exists",
       });
     }

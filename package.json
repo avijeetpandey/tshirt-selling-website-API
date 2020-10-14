@@ -1,10 +1,11 @@
 {
   "name": "blend",
   "version": "1.0.0",
-  "description": "Full stack ecommerce app made with MERN stack",
+  "description": "Ecommerce API  made with express and node",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+     "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "keywords": [
     "nodejs",
