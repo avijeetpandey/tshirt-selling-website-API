@@ -6,19 +6,19 @@ Backend API of the ecommerce Tshirt selling website made with Node , Express and
 
 **Folder Strucure**
 
-.
-├── connection
-├── controllers
-├── images
-├── models
-├── node_modules
-├── package.json
-├── package-lock.json
-├── README.md
-├── routes
-├── server.js
-├── server.log
-└── yarn.lock
+.<br />
+├── connection <br />
+├── controllers <br />
+├── images    <br />
+├── models   <br />
+├── node_modules <br />
+├── package.json <br />
+├── package-lock.json <br />
+├── README.md <br />
+├── routes <br />
+├── server.js <br />
+├── server.log <br />
+└── yarn.lock <br />
 
 - **models** => contains the various schema models for user , product , category etc
 - **controllers** => controls the buisness logic , once the user has hit a particular route
